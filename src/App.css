@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+}
+.app{
+  display: flex;
+  margin: 0 auto;
+  max-width: 500px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.board{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+.cell{
+  border: 1px solid #cacaca;
+  aspect-ratio: 1/1;
+  font-size: min(10vw, 44px);
+  font-weight: bold;
+  color:black;
+}
+.cell[disabled]{
+  background-color: #f9f9f9;
+}
+.cell:not(:disabled){
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.cell:not(:disabled):hover{
+  background-color: #fff5fe;
+}
+
+button{
+  padding: 8px 20px
+}
